@@ -1,0 +1,30 @@
+/* style.css */
+
+/* Interフォントをbodyに適用 */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Tailwind CSSがほとんどのスタイルを処理するため、カスタムCSSは最小限に抑えます */
+/* 必要に応じて追加のカスタムスタイルをここに追加できます */
+
+/* 入力フィールドに数字のみを許可するためのスタイル */
+#guess-input::-webkit-outer-spin-button,
+#guess-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#guess-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* メッセージボックスのアニメーション */
+.message-fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
