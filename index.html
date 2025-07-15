@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヒット＆ブロー</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-200 min-h-screen flex items-center justify-center p-4 font-inter">
+    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full border border-gray-200">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-6">ヒット＆ブロー</h1>
+
+        <div id="game-container" class="space-y-4">
+            <div id="message-box" class="bg-blue-50 text-blue-800 p-3 rounded-lg text-center text-sm font-medium hidden"></div>
+
+            <div class="flex flex-col items-center">
+                <label for="guess-input" class="text-gray-700 text-lg font-semibold mb-2">4桁の数字を入力してください:</label>
+                <input type="text" id="guess-input" maxlength="4" class="w-full p-3 border border-gray-300 rounded-lg text-center text-2xl font-mono tracking-wider focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="例: 1234">
+            </div>
+
+            <button id="guess-button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                推測する
+            </button>
+            <button id="reset-button" class="w-full bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 mt-2">
+                リセット
+            </button>
+
+            <div id="results-container" class="mt-6 bg-gray-50 p-4 rounded-lg shadow-inner max-h-60 overflow-y-auto border border-gray-100">
+                <h2 class="text-xl font-semibold text-gray-800 mb-3 text-center">推測履歴</h2>
+                <div id="guesses-list" class="space-y-2">
+                    <!-- 推測結果がここに追加されます -->
+                    <p class="text-gray-500 text-center text-sm">まだ推測はありません。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
