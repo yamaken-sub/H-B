@@ -1,0 +1,16 @@
+{
+    "name": "ヒット＆ブローゲーム",
+    "short_name": "ヒット＆ブロー",
+    "description": "PWAで動作するシンプルなヒット＆ブローゲームです。",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#e0f2fe",
+    "theme_color": "#2563eb",
+    "icons": [
+        {
+            "src": "icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}
